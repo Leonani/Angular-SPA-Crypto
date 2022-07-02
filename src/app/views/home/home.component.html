@@ -1,0 +1,13 @@
+<app-header></app-header>
+<mat-card>
+    <h1>Avaliable Coins</h1>
+    <mat-card-header>
+        <mat-card-title-group *ngFor="let coin of list" (click)="enterDetail(coin.id)">
+            <div>
+                <mat-card-title>{{coin.name}}</mat-card-title>
+                <mat-card-subtitle>{{coin.id}}</mat-card-subtitle>
+            </div>
+            <p>{{coin.symbol}}</p>
+        </mat-card-title-group>
+    </mat-card-header>
+</mat-card>
