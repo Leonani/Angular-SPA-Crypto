@@ -1,13 +1,35 @@
 <app-header></app-header>
-<mat-card>
-    <h1>Avaliable Coins</h1>
-    <mat-card-header>
-        <mat-card-title-group *ngFor="let coin of list" (click)="enterDetail(coin.id)">
-            <div>
-                <mat-card-title>{{coin.name}}</mat-card-title>
-                <mat-card-subtitle>{{coin.id}}</mat-card-subtitle>
-            </div>
-            <p>{{coin.symbol}}</p>
-        </mat-card-title-group>
-    </mat-card-header>
-</mat-card>
+
+<div class="background">
+        <div>
+            <h1>CRYPTO COINS</h1>
+                          
+        </div>
+
+    <div class="center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Symbol</th>
+                    <th>Change</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <div class="divider"></div>
+            <tbody *ngFor="let coin of list" >
+                <tr class="colu" (click)="enterDetail(coin.id)">                   
+                    <td>{{coin.name}}</td>
+                    <td ><img class="img" src={{coin.image}}/></td>
+                    <td>{{coin.symbol}}</td>
+                    <td >{{coin.price_change_percentage_24h}}%</td>
+                    <td>${{coin.current_price}}</td>                                      
+                </tr>
+                <div class="divider"></div>
+            </tbody>
+        </table> 
+    </div>
+</div>
+
+

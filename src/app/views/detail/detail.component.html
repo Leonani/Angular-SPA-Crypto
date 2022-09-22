@@ -1,17 +1,17 @@
 <app-header></app-header>
-<div>
+<div class="background">
     <mat-card class="global">
         <mat-card-header class="header">
             <div>
                 <mat-card-title>{{detail.name}}</mat-card-title>
-                <p>{{detail.id}}</p>
+                <p>{{detail.symbol}}</p>
             </div>
-            <img mat-card-sm-image src={{detail.image.small}} >
+            <img class="img" mat-card-sm-image src={{detail.image.large}} >
         </mat-card-header>
         <mat-card-content class="info">
             <div class="row">
                 <h1>Price</h1>
-                <p>{{detail.market_data.current_price.usd}}</p>
+                <p>${{detail.market_data.current_price.usd}}</p>
             </div>
             <div class="values">
                 <div class="row">

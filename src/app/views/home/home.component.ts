@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ApiService} from '../../service/coinGecko/api.service'
 import {Router} from '@angular/router'
 import { ListCoins } from 'src/app/interface/ListCoins.interface';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -16,13 +17,16 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.api.getAllCoins().subscribe(data => {
-      this.list = data
+      this.list= data
+      // console.log(data)
     })
   }
+
 
   enterDetail(id: any) {
     // console.log(id)
     this.router.navigate(['detail',id])
   }
 
+  
 }

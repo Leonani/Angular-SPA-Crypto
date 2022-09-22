@@ -13,7 +13,8 @@ export class ApiService {
 
   getAllCoins(){
    
-    return this.http.get<ListCoins[]>("https://api.coingecko.com/api/v3/coins/list")
+    return this.http.get<ListCoins[]>('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
+    
   }
 
   getDetail(id: any):Observable <DetailCoin[]>{
