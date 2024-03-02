@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false
+  API_COIN_GEKO: https://api.coingecko.com/api/v3
 };
 
 /*
